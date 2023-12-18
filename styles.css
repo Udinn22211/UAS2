@@ -1,0 +1,347 @@
+html {
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+
+body, h2, p {
+    margin: 0;
+    padding: 0;
+    font-family: "poppins", "sans-serif";
+}
+
+.header {
+    background-color: rgba(237, 237, 237, 0.85);
+    color: #fff;
+    padding: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(5px);
+}
+
+.logo img {
+    height: 50px;
+    width: auto;
+    display: block;
+    padding-left: 20px; /* Adjusted padding */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex; /* Flex added */
+    flex-wrap: wrap; /* For responsiveness */
+    justify-content: space-between; /* Distribute space */
+}
+
+.navbar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    justify-content: space-between; /* Adjust spacing */
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+    padding-right: 50px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #25274D;
+    transition: color 0.3s ease;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+}
+
+.nav-links a:hover {
+    color: #ff5733;
+}
+
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+}
+
+.hamburger-menu span {
+    width: 25px;
+    height: 3px;
+    background-color: #25274D;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        background-color: #fff;
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hamburger-menu {
+        display: flex;
+    }
+
+    .logo img {
+        padding-left: 20px;
+    }
+
+    .container, .navbar {
+        padding: 0;
+    }
+
+    .layout-main {
+        padding: 5px 20px 50px 20px; /* Adjusted for mobile padding */
+    }
+}
+
+.highlight {
+    color: #939af3;
+}
+.content-main {
+    display: flex;
+    background-color: #25274D;
+    color: #fff;
+    background-image: linear-gradient(rgba(37, 39, 77, 0.9), rgba(37, 39, 77, 0.9)), url('images/social media/2018_SMK_GLORI_SHOW-748-e1576131968517-1100x400.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.content {
+    flex: 1;
+    padding: 100px;
+    text-align: left;
+    gap: 50px;
+    margin: auto;
+}
+
+.content h1 {
+    font-size: 50px;
+    padding-right: 50px;
+    margin:0;
+}
+
+.content p {
+    padding-right: 100px;
+    text-align: justify;
+    margin-bottom:30px;
+}
+h1, p {
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: all 0.5s ease-in;
+}
+
+.btn {
+    display: flex;
+    text-align: center;
+}
+.btn-tentang {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #25274D;
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 40px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-tentang:hover {
+    background-color: #fff;
+    color: #25274D;
+}
+
+.btn-jawaban {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #FFA500; /* Warna latar belakang untuk Coming Soon */
+    color: #fff;
+    border: 2px solid #FFA500; /* Warna batas untuk Coming Soon */
+    border-radius: 40px;
+    text-decoration: none;
+    font-size: 16px;
+    margin-left: 10px; /* Jarak dari tombol sebelumnya */
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-jawaban:hover {
+    background-color: #fff;
+    color: #FFA500; /* Warna teks saat hover */
+}
+
+
+.FotoAing {
+    padding: 10%;
+    padding-top: 10%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.FotoAing img {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.content2 {
+    padding: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.content2 img {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s;
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+
+.content2 img:hover {
+    transform: scale(1.1);
+}
+
+.content2 img.show {
+    opacity: 1;
+    transform: translateY(0);
+    animation: easeInImage 0.5s forwards;
+}
+
+footer {
+    background-color: #25274D;
+    color: #fff;
+    padding: 0px 50px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+}
+
+.social-links img {
+    width: 24px;
+    height: auto;
+}
+
+@keyframes easeInImage {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsif */
+@media (max-width: 992px) {
+    .navbar {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .content-main {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .FotoAing {
+        padding: 20px 0;
+    }
+
+    .content, .FotoAing {
+        padding: 20px;
+    }
+
+    .content2, .sponsors {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: row; /* Mengubah orientasi flex menjadi vertikal */
+        align-items: center; /* Pusatkan elemen secara horizontal */
+        text-align: center; /* Pusatkan teks */
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .logo img {
+        padding-left: 0; /* Menghapus padding pada logo agar terlihat lebih rapi di perangkat mobile */
+    }
+
+    .nav-links {
+        flex-direction: column; /* Mengubah orientasi item menu menjadi vertikal */
+        gap: 5px; /* Mengurangi jarak antara item menu */
+        padding-right: 0; /* Menghapus padding kanan */
+    }
+
+    .content h1 {
+        font-size: 40px; /* Menyesuaikan ukuran font judul */
+        padding-right: 0; /* Menghapus padding kanan */
+        text-align: center;
+    }
+
+    .content p {
+        padding-right: 0; /* Menghapus padding kanan */
+        text-align: justify;
+    }
+
+    .content, .FotoAing a {
+        padding: 20px; /* Menyesuaikan padding untuk konten dan video */
+    }
+
+    .FotoAing image {
+        width: 50%; /* Mengatur lebar video agar memenuhi lebar layar */
+        height: 100%; /* Tinggi akan disesuaikan secara otomatis sesuai rasio aspek video */
+    }
+
+    .content2, .sponsors {
+        flex-wrap: wrap; /* Memastikan konten akan mengisi ke baris baru jika perlu */
+    }
+
+    .content2 img {
+        width: 250px; /* Mengatur lebar gambar */
+        height: 170px; /* Mengatur tinggi gambar */
+    }
+
+    .footer-container {
+        flex-direction: column; /* Mengubah orientasi konten footer menjadi vertikal */
+        gap: 10px; /* Menambahkan jarak antara elemen-elemen di footer */
+        
+    }
+}
